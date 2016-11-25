@@ -19,7 +19,7 @@ no_of_cameras=22;            % number of cameras
 weight_max=0.9;       		% inertia weight 
 weight_min=0.4;       		% inertia weight 
 acceleration1=0.2;           	% acceleration factor 
-acceleration2=0.02;           	% acceleration factor
+acceleration2=0.2;           	% acceleration factor
 acceleration3 =0.2;
 
 
@@ -74,8 +74,8 @@ max_run=10;                 % set maximum number of runs need to be
                    
                     v(j,k,i)=a0+a1;
                     if(iteration < 50)
-                        a2 = acceleration2*5*(pbest(j,k,i)-temp_particles(j,k,i));
-                        a3 = acceleration3*(50-iteration)*(rand()- rand());
+                        a2 = acceleration2*(pbest(j,k,i)-temp_particles(j,k,i));
+                        a3 = acceleration3*(50-iteration) * ;
                         v(j,k,i) = v(j,k,i) + a3;
                     else
                         a2 = acceleration2*(rand()/2)*(pbest(j,k,i)-temp_particles(j,k,i));
